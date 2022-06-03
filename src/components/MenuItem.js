@@ -7,11 +7,15 @@ const MenuItem = ({name, desc, price, imgSrc, imgAlt}) => {
                 <div className="img-box">
                     <img src={imgSrc} alt={imgAlt} />
                 </div>
-                <div className="text-box">
+                <div className="content-box">
                     <h3 className="item-name">{name}</h3>
                     <p className="desc">{desc}</p>
-                    <p className="price">{`$${price.toString()}`}</p>
+                    <div className="bottom">
+                        <p className="price">{`$${price.toString()}`}</p>
+                        <button type="button" className="btn btn-primary">+ Add</button>
+                    </div>
                 </div>
+                
             </div>
         </article>
     )

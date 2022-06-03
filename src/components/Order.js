@@ -2,7 +2,6 @@ import OrderItem from "./OrderItem";
 
 const Order = () => {
 
-
     return (
         <section className="order">
 
