@@ -33,6 +33,7 @@ header {
 	left: 0;
 	height: calc(100vh - var(--header-height));
 	width: calc(100vw - var(--order-width));
+	overflow: auto;
 }
 
 .order-box {
@@ -43,3 +44,33 @@ header {
 	border-left: var(--border);
 }
 
+.menu-item {
+	background-color: rgb(192, 231, 244);
+	height: fit-content;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 2px 5px 2px #ddd;
+}
+
+.img-box {
+	position: relative;
+	height: 250px;
+	overflow: hidden;
+	
+}
+
+.img-box img {
+	position: absolute;
+	overflow: hidden;
+	width: 110%;
+	bottom: -30%;
+	left: 0;
+}
+
+.menu-item .text-box {
+	padding: 20px;
+}
+
+.menu-item .price {
+	font-size: 2rem;
+}

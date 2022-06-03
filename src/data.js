@@ -1,9 +1,14 @@
+import vanilla from './images/vanilla_ice_cream.png';
+import strawberriesAndCream from './images/strawberries_and_cream.jpeg';
+import banana from './images/banana_ice_cream.jpeg';
+import doubleBagel from './images/bagel_ice_cream.jpeg';
+
 const DATA = [
     {
         name: 'Venus Vanilla',
         desc: `Simple and powerful, just like Venus Williams' backhand.`,
         price: 3.99,
-        imgFileName: 'vanilla_ice_cream.png',
+        imgSrc: vanilla,
         imgAlt: 'Venus Vanilla ice cream',
         id: 1,
     },
@@ -11,7 +16,7 @@ const DATA = [
         name: 'Strawberries & Cream',
         desc: `You'll feel like you're at Wimbledon with this classic.`,
         price: 4.99,
-        imgFileName: 'strawberries_and_cream.jpeg',
+        imgSrc: strawberriesAndCream,
         imgAlt: 'Strawberries & Cream ice cream',
         id: 2,
     },
@@ -19,7 +24,7 @@ const DATA = [
         name: 'Around-The-Net Banana',
         desc: `Packed with enough bananas to spin your next forehand around the net post.`,
         price: 4.59,
-        imgFileName: 'banana_ice_cream.jpeg',
+        imgSrc: banana,
         imgAlt: 'Around-The-Net Banana ice cream',
         id: 3,
     },
@@ -27,7 +32,7 @@ const DATA = [
         name: 'Double Bagel',
         desc: `Rough day on court? This sweet and savory ice cream has EVERYTHING 😉 you need to feel better.`,
         price: 4.29,
-        imgFileName: 'bagel_ice_cream.jpeg',
+        imgSrc: doubleBagel,
         imgAlt: 'Double Bagel ice cream',
         id: 4,
     }
