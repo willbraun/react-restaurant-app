@@ -1,6 +1,7 @@
-const OrderItem = ({name, desc, price, imgSrc, imgAlt, addItem}) => {
+import trashCanIcon from './../images/trash-solid.svg';
 
-    console.log(imgSrc);
+const OrderItem = ({name, desc, price, imgSrc, imgAlt, addItem}) => {
+    console.log(trashCanIcon)
     return (
         <article className="order-item">
             <div className="img-box-order">
@@ -8,11 +9,11 @@ const OrderItem = ({name, desc, price, imgSrc, imgAlt, addItem}) => {
             </div>
             <div>
                 <p>{name}</p>
-                <p>{price}</p>
+                <p>{`$${price}`}</p>
             </div>
-            <div>
-                Icon
-            </div>
+            <button className="trash-can" type="button">
+                <img src={trashCanIcon} alt="trash can icon" />
+            </button>
         </article>
     )
 }
