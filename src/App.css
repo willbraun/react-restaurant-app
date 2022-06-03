@@ -89,3 +89,25 @@ header {
 .menu-item button {
 	font-weight: 700;
 }
+
+.order-item {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	margin: 20px;
+	padding: 10px;
+	height: fit-content;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 2px 5px 2px #ddd;
+	text-align: left;
+}
+
+.order-item p {
+	margin: 0;
+}
+
+.img-box-order img {
+	height: 60px;
+	border-radius: 7px;
+}

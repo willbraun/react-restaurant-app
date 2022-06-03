@@ -1,7 +1,6 @@
-const MenuItem = ({name, desc, price, imgSrc, imgAlt}) => {
+const MenuItem = ({name, desc, price, imgSrc, imgAlt, addItem}) => {
 
     return (
-        
         <article className="col-xl-4 col-lg-6 col-md-12 mx-sm-0">
             <div className="menu-item">
                 <div className="img-box">
@@ -12,7 +11,7 @@ const MenuItem = ({name, desc, price, imgSrc, imgAlt}) => {
                     <p className="desc">{desc}</p>
                     <div className="bottom">
                         <p className="price">{`$${price.toString()}`}</p>
-                        <button type="button" className="btn btn-primary">+ Add</button>
+                        <button type="button" className="btn btn-primary" onClick={() => addItem({name, desc, price, imgSrc, imgAlt})}>+ Add</button>
                     </div>
                 </div>
                 
