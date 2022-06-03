@@ -1,11 +1,14 @@
+import DATA from './../data.js'
 import MenuItem from "./MenuItem";
 
 const MenuList = () => {
 
+    const items = DATA.map(entry => <MenuItem key={entry.id} {...entry}/>)
+
     return (
-        <main className="menu-list">
-            <h2>Menu</h2>
-        </main>
+        <section className="row menu-list">
+            {items}
+        </section>
     )
 }
 

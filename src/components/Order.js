@@ -4,9 +4,9 @@ const Order = () => {
 
 
     return (
-        <aside className="order">
-            <h2>Order</h2>
-        </aside>
+        <section className="order">
+
+        </section>
     )
 }
 

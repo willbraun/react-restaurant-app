@@ -8,8 +8,14 @@ function App() {
 			<header>
 				<h1>Love-All Ice Cream</h1>
 			</header>
-			<MenuList />
-			<Order />
+			<main className="menu-list-box">
+            	<h2>Menu</h2>
+            	<MenuList />
+        	</main>
+			<aside className="order-box">
+            	<h2>Order</h2>
+				<Order />
+        	</aside>
     	</div>
   	);
 }
