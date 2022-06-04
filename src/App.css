@@ -42,6 +42,7 @@ header {
 	height: calc(100vh - var(--header-height));
 	width: var(--order-width);
 	border-left: var(--border);
+	overflow: auto;
 }
 
 .menu-item {
@@ -107,9 +108,27 @@ header {
 	margin: 0;
 }
 
+.order-item:last-child {
+	margin-bottom: 5rem;
+}
+
 .img-box-order img {
 	height: 60px;
 	border-radius: 7px;
+}
+
+.price-and-selector {
+	display: flex;
+	justify-content: space-between;
+}
+
+.quantity-select {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.quantity-select button{
+	
 }
 
 .trash-can {
@@ -120,20 +139,15 @@ header {
 	background-color: transparent;
 }
 
-.order-bottom {
-	display: flex;
-}
-
 .checkout {
-	position: absolute;
+	position: fixed;
 	bottom: 1rem;
-	left: 50%;
-	transform: translateX(-50%);
+	right: calc(var(--order-width) * 0.05);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 3rem;
-	width: 90%;
+	width: calc(var(--order-width) * 0.9);
 	background-color: rgb(74, 196, 74) ;
 	border: none;
 	padding: 0 1rem;
