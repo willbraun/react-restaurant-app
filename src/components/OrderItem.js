@@ -1,3 +1,5 @@
+import plus from './../images/circle-plus-solid.svg'
+import minus from './../images/circle-minus-solid.svg'
 import trashCanIcon from './../images/trash-solid.svg';
 
 const OrderItem = ({name, price, id, quantity, imgSrc, imgAlt, removeItem, increaseQuantity, decreaseQuantity}) => {
@@ -12,9 +14,13 @@ const OrderItem = ({name, price, id, quantity, imgSrc, imgAlt, removeItem, incre
                 <div className="price-and-selector">
                     <p>{`$${(price * quantity).toFixed(2)}`}</p>
                     <div className="quantity-select">
-                        <button type="button" onClick={() => decreaseQuantity(id)}>-</button>
+                        <button type="button" onClick={() => decreaseQuantity(id)}>
+                            <img src={minus} alt="minus sign icon" />
+                        </button>
                         <p>{quantity}</p>
-                        <button type="button" onClick={() => increaseQuantity(id)}>+</button>
+                        <button type="button" onClick={() => increaseQuantity(id)}>
+                            <img src={plus} alt="plus sign icon" />
+                        </button>
                     </div>
                 </div>
             </div>
