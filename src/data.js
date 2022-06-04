@@ -22,7 +22,7 @@ const DATA = [
     },
     {
         name: 'Around-The-Net Banana',
-        desc: `Packed with enough bananas to spin your next forehand around the net post.`,
+        desc: `Packed with enough bananas to spin your next forehand around the net.`,
         price: 4.59,
         imgSrc: banana,
         imgAlt: 'Around-The-Net Banana ice cream',
@@ -30,7 +30,7 @@ const DATA = [
     },
     {
         name: 'Double Bagel',
-        desc: `Rough day on court? This sweet and savory ice cream has EVERYTHING 😉 you need to feel better.`,
+        desc: `This savory ice cream has EVERYTHING 😉 you need.`,
         price: 4.29,
         imgSrc: doubleBagel,
         imgAlt: 'Double Bagel ice cream',
