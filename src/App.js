@@ -2,12 +2,14 @@ import { useState } from 'react';
 import DATA from './data.js'; 
 import MenuList from './components/MenuList';
 import Order from './components/Order';
+import cartIcon from './images/cart-shopping-solid.svg'
 import './App.css';
 
 function App() {
 	const [state, setState] = useState({
         selection: [],
         uid: DATA.length,
+		showOrderMobile: false,
     });
 
 	const addItem = (item) => {
@@ -25,7 +27,7 @@ function App() {
 			newList[index].quantity++;
 		}
 
-		setState({selection: newList, uid: newId})
+		setState({...state, selection: newList, uid: newId})
 	};
 
 	const removeItem = (id) => {
@@ -48,17 +50,30 @@ function App() {
 		newList[index].quantity === 1 ? removeItem(id) : newList[index].quantity--;
 		setState({...state, selection: newList});
 	}
+
+	const toggleOrderMobile = () => {
+		setState({...state, showOrderMobile: !state.showOrderMobile})
+	}
+
+	const getOrderClasses = () => {
+		if (state.showOrderMobile) {
+			
+		}
+	}
 	
 	return (
     	<div className="App">
 			<header>
 				<h1>Love-All Ice Cream</h1>
+				<button className="cart-button" onClick={() => toggleOrderMobile()}>
+					<img className="cart-icon" src={cartIcon} alt="cart icon" />
+				</button>
 			</header>
 			<main className="menu-list-box">
             	<h2>Menu</h2>
             	<MenuList addItem={addItem}/>
         	</main>
-			<aside className="order-box">
+			<aside className={`order-box${state.showOrderMobile ? ' show-order': ''}`}>
             	<h2>Order</h2>
 				<Order state={state} removeItem={removeItem} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity}/>
         	</aside>
