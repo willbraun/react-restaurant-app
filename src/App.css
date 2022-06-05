@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL&family=Dosis:wght@600&display=swap');
+
 :root {
-	--header-height: 70px;
-	--order-width: 350px;
+	--header-height: 4rem;
+	--order-width: 24rem;
 	--border: 1px solid #aaa;
 }
 
-* {
-	font-family: Arial, Helvetica, sans-serif;
+* {	
+	font-family: 'Charis SIL', sans-serif;
 }
 
 .App {
@@ -15,9 +17,16 @@
 
 header {
 	display: flex;
+	justify-content: center;
 	align-items: center;
 	height: var(--header-height);
 	border-bottom: var(--border);
+}
+
+header > img {
+	height: 70%;
+	border-radius: 50%;
+	box-shadow: 0 0 10px 3px #aaa;
 }
 
 h1 {
@@ -25,7 +34,7 @@ h1 {
 	font-weight: 700;
 	width: fit-content;
 	height: fit-content;
-	margin: auto;
+	margin: 2rem;
 }
 
 .cart-button {
@@ -39,6 +48,16 @@ h1 {
 
 .cart-icon {
 	height: 100%;
+}
+
+.count {
+	position: absolute;
+	top: 2%;
+	width: 84%;
+	margin: auto;
+	color: #fff;
+	font-size: 0.8rem;
+	font-weight: 700;
 }
 
 h2 {
@@ -63,7 +82,7 @@ h2 {
 	overflow: auto;
 	background-color: #fff;
 	z-index: 10;
-	transition: 0.3s ease-out;
+	transition: 0.3s;
 }
 
 .menu-list-box h2, .order-box h2 {
@@ -162,14 +181,17 @@ h2 {
 }
 
 .price-and-selector {
+	width: 70%;
+	margin: auto;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 .quantity-select {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	width: 37%;
 }
 
 .quantity-select p {

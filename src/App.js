@@ -2,6 +2,7 @@ import { useState } from 'react';
 import DATA from './data.js'; 
 import MenuList from './components/MenuList';
 import Order from './components/Order';
+import tennisBall from './images/tennis_ball.png'
 import cartIcon from './images/cart-shopping-solid.svg'
 import './App.css';
 
@@ -55,18 +56,16 @@ function App() {
 		setState({...state, showOrderMobile: !state.showOrderMobile})
 	}
 
-	const getOrderClasses = () => {
-		if (state.showOrderMobile) {
-			
-		}
-	}
+	const totalQuantity = state.selection.reduce((acc, i) => acc + i.quantity, 0);
 	
 	return (
     	<div className="App">
 			<header>
+				<img src={tennisBall} alt="tennis ball" />
 				<h1>Love-All Ice Cream</h1>
 				<button className="cart-button" onClick={() => toggleOrderMobile()}>
 					<img className="cart-icon" src={cartIcon} alt="cart icon" />
+					<p className="count">{totalQuantity}</p>
 				</button>
 			</header>
 			<main className="menu-list-box">
