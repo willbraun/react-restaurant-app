@@ -9,10 +9,6 @@ const MenuList = ({addItem}) => {
         <section className="menu-list">
             {items}
         </section>
-        
-        // <section className="row mx-auto g-4 menu-list">
-        //     {items}
-        // </section>
     )
 }
 
